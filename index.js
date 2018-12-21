@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+
+const filepath = process.env.FILEPATH || process.env.PWD;
 const inputFileName = process.env.INPUTFILENAME || 'sample-input.txt';
 const outputFileName = process.env.OUTPUTFILENAME || 'results.txt'
 const pointWeights = process.env.POINTWEIGHTS || {
@@ -10,8 +12,8 @@ const pointWeights = process.env.POINTWEIGHTS || {
   4: 1,
   5: 0
 }
+console.log(process.env)
 
-const filepath = process.env.FILEPATH || process.env.PWD;
 
 // One per unique item being surveyed
 class Item {
@@ -88,7 +90,7 @@ fs.readFile(inputFileName, 'utf8', (err, data) => {
       if (err) {
         console.log(`Error writing file: ${err}`)
       } else {
-        console.log(`Success! Results at ${filepath}/${outputFileName}.txt`)
+        console.log(`Success! Results at ${filepath}/${outputFileName}`)
       }
     });
   }

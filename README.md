@@ -1,23 +1,16 @@
 ## Istallation Instructions
 
-  * `git clone `
-  * ``
-  * Use real fonts
-  * Make sizes dynamic but with fixed aspect ratio. Should I base on width or height?
-  * Add north arrows
-  * Indicate where cross section is?
-
-  * Add strike and dip symbol to the top bed (and map view)
-    * Add symbol and rotate with strike
-    * Add text with dynamically updated dip
-    * Advanced: Move text in a circle based on dip
-    * Advanced: Move symbol to the middle of a bed. Or perhaps a random spot on the diagram?
+  * Navigate to the folder you would like to keep the utility in.
+   `git clone https://github.com/ericschoettle/survey-sorter-utility.git`
 
 ## Usage instructions
 
-  * `.\` 
-  * Add strike and dip symbol to the top bed (and map view)
-    * Add symbol and rotate with strike
-    * Add text with dynamically updated dip
-    * Advanced: Move text in a circle based on dip
-    * Advanced: Move symbol to the middle of a bed. Or perhaps a random spot on the diagram?
+  * Navigate to the survey-sorter-utility directory. For single-time, all defaults use,
+   `.\index.js` 
+  * For repeated use, 
+   `npm install -g`
+   `sort`
+  * The default behavior is to read from sample-input.txt in the present working directory and write to results.txt in the same folder. These behaviors, and the point-mapping, can be changed, eg:
+   `sort FILEPATH=Users/me/surveys INPUTFILENAME=my-input.txt OUTPUTFILENAME=my-output.txt`
+
+   
